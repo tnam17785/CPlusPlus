@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10. Bit manipulation — CPlusPlus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+<a href="../index.html" class="brand"><img src="../assets/logo.svg" alt="C++"><span>CPlusPlus</span></a>
+<button class="menu-btn" aria-label="Menu">☰</button>
+<ul class="nav">
+<li><a href="../index.html">Trang chủ</a></li>
+<li><a href="../index.html#part1">Phần I</a></li>
+<li><a href="../index.html#part2">Phần II</a></li>
+<li><a href="../index.html#part3">Phần III</a></li>
+<li><a href="../source.html">Nguồn</a></li>
+</ul>
+</div></header>
+<main class="container page">
+<div class="page-layout">
+<aside class="sidebar">
+<div class="sidebar-title">Phần 1 · Basic techniques</div>
+<ul>
+<li><a href="01-introduction.html">1. Introduction</a></li>
+<li><a href="02-time-complexity.html">2. Time complexity</a></li>
+<li><a href="03-sorting.html">3. Sorting</a></li>
+<li><a href="04-data-structures.html">4. Data structures</a></li>
+<li><a href="05-complete-search.html">5. Complete search</a></li>
+<li><a href="06-greedy.html">6. Greedy algorithms</a></li>
+<li><a href="07-dynamic-programming.html">7. Dynamic programming</a></li>
+<li><a href="08-amortized-analysis.html">8. Amortized analysis</a></li>
+<li><a href="09-range-queries.html">9. Range queries</a></li>
+<li><a href="10-bit-manipulation.html" class="active">10. Bit manipulation</a></li>
+</ul>
+</aside>
+<div class="main">
+<div class="breadcrumb"><a href="../index.html">Trang chủ</a> <span>/</span> Phần 1 <span>/</span> 10. Bit manipulation</div>
+<h1>10. Bit manipulation</h1>
+<p>Thao tác trên biểu diễn nhị phân rất nhanh.</p>
+<ul>
+<li>Phép: <code>&amp; | ^ ~ &lt;&lt; &gt;&gt;</code>.</li>
+<li>Biểu diễn tập hợp bằng bitmask khi n ≤ 20–25.</li>
+<li>Tối ưu DP trên tập con (SOS DP, enumeration of subsets…).</li>
+</ul>
+<pre><code>if (x &amp; (1 &lt;&lt; k)) { /* bit k bật */ }
+x |= (1 &lt;&lt; k);   // bật
+x &amp;= ~(1 &lt;&lt; k);  // tắt
+x ^= (1 &lt;&lt; k);   // đảo
+int b = x &amp; -x;  // bit thấp nhất đang bật</code></pre>
+<div class="pager"><a href="09-range-queries.html"><span class="label">← Trước</span><span class="title">Ch. 9</span></a><a href="11-basics-of-graphs.html" class="next"><span class="label">Tiếp →</span><span class="title">Ch. 11</span></a></div>
+</div></div>
+</main>
+<footer class="site-footer"><div class="container"><p>CPlusPlus — Diễn giải theo cấu trúc Competitive Programmer’s Handbook (Antti Laaksonen)</p></div></footer>
+<script src="../js/main.js"></script>
+</body></html>
