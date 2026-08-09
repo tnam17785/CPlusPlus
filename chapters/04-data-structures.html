@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>4. Data structures — CPlusPlus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+<a href="../index.html" class="brand"><img src="../assets/logo.svg" alt="C++"><span>CPlusPlus</span></a>
+<button class="menu-btn" aria-label="Menu">☰</button>
+<ul class="nav">
+<li><a href="../index.html">Trang chủ</a></li>
+<li><a href="../index.html#part1">Phần I</a></li>
+<li><a href="../index.html#part2">Phần II</a></li>
+<li><a href="../index.html#part3">Phần III</a></li>
+<li><a href="../source.html">Nguồn</a></li>
+</ul>
+</div></header>
+<main class="container page">
+<div class="page-layout">
+<aside class="sidebar">
+<div class="sidebar-title">Phần 1 · Basic techniques</div>
+<ul>
+<li><a href="01-introduction.html">1. Introduction</a></li>
+<li><a href="02-time-complexity.html">2. Time complexity</a></li>
+<li><a href="03-sorting.html">3. Sorting</a></li>
+<li><a href="04-data-structures.html" class="active">4. Data structures</a></li>
+<li><a href="05-complete-search.html">5. Complete search</a></li>
+<li><a href="06-greedy.html">6. Greedy algorithms</a></li>
+<li><a href="07-dynamic-programming.html">7. Dynamic programming</a></li>
+<li><a href="08-amortized-analysis.html">8. Amortized analysis</a></li>
+<li><a href="09-range-queries.html">9. Range queries</a></li>
+<li><a href="10-bit-manipulation.html">10. Bit manipulation</a></li>
+</ul>
+</aside>
+<div class="main">
+<div class="breadcrumb"><a href="../index.html">Trang chủ</a> <span>/</span> Phần 1 <span>/</span> 4. Data structures</div>
+<h1>4. Data structures</h1>
+<p>Chọn đúng cấu trúc dữ liệu thường quyết định độ phức tạp.</p>
+<ul>
+<li><strong>vector</strong>: mảng động, push_back O(1) amortized, truy cập O(1).</li>
+<li><strong>set / multiset</strong>: cây cân bằng, thêm/xóa/tìm O(log n), luôn có thứ tự.</li>
+<li><strong>map / unordered_map</strong>: key→value. map O(log n) có thứ tự, unordered_map trung bình O(1).</li>
+<li><strong>queue, stack, deque</strong>: đầu/cuối O(1).</li>
+<li><strong>priority_queue</strong>: heap, lấy max/min O(log n).</li>
+<li><strong>bitset</strong>: mảng bit tối ưu.</li>
+</ul>
+<p>Iterator và range cho phép dùng thuật toán chuẩn (<code>sort</code>, <code>lower_bound</code>, <code>accumulate</code>…). So với chỉ mảng + sort, cấu trúc động giúp xử lý cập nhật xen kẽ truy vấn hiệu quả hơn.</p>
+<div class="pager"><a href="03-sorting.html"><span class="label">← Trước</span><span class="title">Ch. 3</span></a><a href="05-complete-search.html" class="next"><span class="label">Tiếp →</span><span class="title">Ch. 5</span></a></div>
+</div></div>
+</main>
+<footer class="site-footer"><div class="container"><p>CPlusPlus — Diễn giải theo cấu trúc Competitive Programmer’s Handbook (Antti Laaksonen)</p></div></footer>
+<script src="../js/main.js"></script>
+</body></html>
