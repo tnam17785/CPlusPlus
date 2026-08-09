@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1. Introduction — CPlusPlus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+<a href="../index.html" class="brand"><img src="../assets/logo.svg" alt="C++"><span>CPlusPlus</span></a>
+<button class="menu-btn" aria-label="Menu">☰</button>
+<ul class="nav">
+<li><a href="../index.html">Trang chủ</a></li>
+<li><a href="../index.html#part1">Phần I</a></li>
+<li><a href="../index.html#part2">Phần II</a></li>
+<li><a href="../index.html#part3">Phần III</a></li>
+<li><a href="../source.html">Nguồn</a></li>
+</ul>
+</div></header>
+<main class="container page">
+<div class="page-layout">
+<aside class="sidebar">
+<div class="sidebar-title">Phần 1 · Basic techniques</div>
+<ul>
+<li><a href="01-introduction.html" class="active">1. Introduction</a></li>
+<li><a href="02-time-complexity.html">2. Time complexity</a></li>
+<li><a href="03-sorting.html">3. Sorting</a></li>
+<li><a href="04-data-structures.html">4. Data structures</a></li>
+<li><a href="05-complete-search.html">5. Complete search</a></li>
+<li><a href="06-greedy.html">6. Greedy algorithms</a></li>
+<li><a href="07-dynamic-programming.html">7. Dynamic programming</a></li>
+<li><a href="08-amortized-analysis.html">8. Amortized analysis</a></li>
+<li><a href="09-range-queries.html">9. Range queries</a></li>
+<li><a href="10-bit-manipulation.html">10. Bit manipulation</a></li>
+</ul>
+</aside>
+<div class="main">
+<div class="breadcrumb"><a href="../index.html">Trang chủ</a> <span>/</span> Phần 1 <span>/</span> 1. Introduction</div>
+<h1>1. Introduction</h1>
+
+<p>Competitive programming kết hợp hai kỹ năng: <strong>thiết kế thuật toán</strong> (tìm cách giải đúng và đủ nhanh) và <strong>cài đặt thuật toán</strong> (viết code chính xác, gọn, chạy kịp thời gian).</p>
+<p>Khác phần mềm thông thường, chương trình thi đấu thường ngắn, viết nhanh, không cần bảo trì lâu dài, nhưng phải đúng ngay từ lần nộp đầu tiên vì hệ thống chấm bằng test case.</p>
+
+<h3>1.1 Ngôn ngữ lập trình</h3>
+<p>Ba ngôn ngữ phổ biến nhất là C++, Python và Java. C++ chiếm ưu thế tuyệt đối nhờ tốc độ và STL mạnh. Python tiện khi cần số nguyên lớn sẵn. Java cũng ổn định. Hầu hết ví dụ trên trang này dùng C++.</p>
+
+<h3>1.2 Template C++ tiêu chuẩn</h3>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    // giải bài ở đây
+    return 0;
+}</code></pre>
+<p><code>bits/stdc++.h</code> kéo gần như toàn bộ thư viện chuẩn (GCC). Hai dòng sync giúp tăng tốc nhập xuất. Biên dịch khuyến nghị: <code>g++ -std=c++17 -O2 -Wall sol.cpp -o sol</code>.</p>
+
+<h3>1.3 Nhập xuất</h3>
+<p>Dùng standard streams (<code>cin</code>/<code>cout</code> hoặc <code>scanf</code>/<code>printf</code>). Đọc cả dòng có khoảng trắng bằng <code>getline</code>. Khi bài yêu cầu file có thể <code>freopen</code>.</p>
+
+<h3>1.4 Làm việc với số</h3>
+<p><code>int</code> (32-bit) khoảng ±2·10⁹. <code>long long</code> (64-bit) khoảng ±9·10¹⁸ — dùng khi cần số lớn. Lưu ý: nhân hai <code>int</code> vẫn ra <code>int</code>, phải ép kiểu sớm.</p>
+<p>Modular arithmetic: nhiều bài yêu cầu kết quả modulo 10⁹+7. Có thể lấy dư trước rồi mới cộng/trừ/nhân. Số thực dùng <code>double</code>/<code>long double</code>; so sánh bằng epsilon (thường 1e-9) thay vì <code>==</code>.</p>
+
+<h3>1.5 Rút gọn code</h3>
+<p>Dùng <code>using ll = long long;</code>, <code>using vi = vector&lt;int&gt;;</code> và macro cẩn thận (có ngoặc) để viết nhanh hơn trong giờ thi.</p>
+
+<h3>1.6 Toán học nền &amp; tài nguyên</h3>
+<p>Cần nắm tổng cấp số cộng/nhân, tổng 1..n, tổng bình phương, ước lượng tổng điều hòa, Fibonacci, logarit, tập hợp, logic. Các cuộc thi chính: IOI, ICPC, Codeforces, AtCoder. Tài liệu thêm: CSES, CLRS, Algorithm Design.</p>
+
+<div class="pager"><a href="../index.html"><span class="label">← Trước</span><span class="title">Trang chủ</span></a><a href="02-time-complexity.html" class="next"><span class="label">Tiếp →</span><span class="title">Ch. 2</span></a></div>
+</div></div>
+</main>
+<footer class="site-footer"><div class="container">
+<p>CPlusPlus — Diễn giải theo cấu trúc Competitive Programmer’s Handbook (Antti Laaksonen)</p>
+</div></footer>
+<script src="../js/main.js"></script>
+</body></html>

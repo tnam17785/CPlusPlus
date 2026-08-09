@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2. Time complexity — CPlusPlus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+<a href="../index.html" class="brand"><img src="../assets/logo.svg" alt="C++"><span>CPlusPlus</span></a>
+<button class="menu-btn" aria-label="Menu">☰</button>
+<ul class="nav">
+<li><a href="../index.html">Trang chủ</a></li>
+<li><a href="../index.html#part1">Phần I</a></li>
+<li><a href="../index.html#part2">Phần II</a></li>
+<li><a href="../index.html#part3">Phần III</a></li>
+<li><a href="../source.html">Nguồn</a></li>
+</ul>
+</div></header>
+<main class="container page">
+<div class="page-layout">
+<aside class="sidebar">
+<div class="sidebar-title">Phần 1 · Basic techniques</div>
+<ul>
+<li><a href="01-introduction.html">1. Introduction</a></li>
+<li><a href="02-time-complexity.html" class="active">2. Time complexity</a></li>
+<li><a href="03-sorting.html">3. Sorting</a></li>
+<li><a href="04-data-structures.html">4. Data structures</a></li>
+<li><a href="05-complete-search.html">5. Complete search</a></li>
+<li><a href="06-greedy.html">6. Greedy algorithms</a></li>
+<li><a href="07-dynamic-programming.html">7. Dynamic programming</a></li>
+<li><a href="08-amortized-analysis.html">8. Amortized analysis</a></li>
+<li><a href="09-range-queries.html">9. Range queries</a></li>
+<li><a href="10-bit-manipulation.html">10. Bit manipulation</a></li>
+</ul>
+</aside>
+<div class="main">
+<div class="breadcrumb"><a href="../index.html">Trang chủ</a> <span>/</span> Phần 1 <span>/</span> 2. Time complexity</div>
+<h1>2. Time complexity</h1>
+
+<p>Độ phức tạp thời gian ước lượng thời gian chạy theo kích thước input n. Big-O bỏ hằng số và số hạng nhỏ, chỉ giữ hạng lớn nhất.</p>
+
+<h3>2.1 Quy tắc tính</h3>
+<ul>
+<li>Vòng lặp đơn → O(n).</li>
+<li>k vòng lồng nhau → O(n<sup>k</sup>).</li>
+<li>Nhiều đoạn nối tiếp → lấy đoạn chậm nhất.</li>
+<li>Đệ quy: số lần gọi × chi phí mỗi lần.</li>
+</ul>
+
+<h3>2.2 Các lớp độ phức tạp thường gặp</h3>
+<table>
+<thead><tr><th>Độ phức tạp</th><th>Ý nghĩa</th><th>n khả thi (≈1–2s)</th></tr></thead>
+<tbody>
+<tr><td>O(1)</td><td>Công thức trực tiếp</td><td>—</td></tr>
+<tr><td>O(log n)</td><td>Chia đôi / binary search</td><td>10¹⁸</td></tr>
+<tr><td>O(√n)</td><td>Thuật toán căn</td><td>10¹²</td></tr>
+<tr><td>O(n)</td><td>Duyệt một lần</td><td>10⁸</td></tr>
+<tr><td>O(n log n)</td><td>Sort, set/map</td><td>10⁶</td></tr>
+<tr><td>O(n²)</td><td>Hai vòng lồng</td><td>≈5·10³</td></tr>
+<tr><td>O(n³)</td><td>Ba vòng</td><td>300–500</td></tr>
+<tr><td>O(2ⁿ)</td><td>Duyệt tập con</td><td>20–25</td></tr>
+<tr><td>O(n!)</td><td>Hoán vị</td><td>≤12</td></tr>
+</tbody>
+</table>
+<p>Thuật toán đa thức (O(n<sup>k</sup>) với k nhỏ) thường được coi là hiệu quả. Nhiều bài NP-hard không có thuật toán đa thức đã biết.</p>
+
+<h3>2.3 Ước lượng thực tế &amp; ví dụ</h3>
+<p>Máy chấm khoảng 10⁸–10⁹ phép đơn giản/giây. Trước khi code hãy ước lượng n tối đa từ độ phức tạp.</p>
+<p><strong>Maximum subarray sum</strong>: cách ngây thơ O(n³)/O(n²). Thuật toán Kadane O(n) duy trì tổng tốt nhất kết thúc tại vị trí hiện tại.</p>
+
+<div class="pager"><a href="01-introduction.html"><span class="label">← Trước</span><span class="title">Ch. 1</span></a><a href="03-sorting.html" class="next"><span class="label">Tiếp →</span><span class="title">Ch. 3</span></a></div>
+</div></div>
+</main>
+<footer class="site-footer"><div class="container">
+<p>CPlusPlus — Diễn giải theo cấu trúc Competitive Programmer’s Handbook (Antti Laaksonen)</p>
+</div></footer>
+<script src="../js/main.js"></script>
+</body></html>
